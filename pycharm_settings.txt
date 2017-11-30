@@ -1,0 +1,12 @@
+﻿需要先安装混合字体
+
+切记参考主题官网，需要安装插件：
+
+https://plugins.jetbrains.com/plugin/8006-material-theme-ui
+
+
+jetbrains: https://github.com/ChrisRM/material-theme-jetbrains
+
+sublime: https://github.com/equinusocio/material-theme
+
+

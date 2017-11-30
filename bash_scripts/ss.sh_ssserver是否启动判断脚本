@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+# 判断ssserver是否启动，如果未启动，则启动！
+# 可以配合corntab每分钟自动检测ssserver是否启动，如果不启动，则开启！
+# Author:yaro,2017.11.23
+STATUS=$(ps aux | grep sss | grep ssserver | awk '{print $16}')
+
+if [ "$STATUS" == "start" ]
+    then
+        echo "ssserver is running" > /dev/null
+    else
+        ssserver -c /root/shadowsocks.json -d start
+fi
