@@ -1,0 +1,60 @@
+body {
+    background-color: #263238;
+}
+
+* {
+    font-family: Menlo, 'Microsoft YaHei', 'YaHei Monaco Hybird', serif;
+}
+
+a {
+    color: #61AFEF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: #90C378;
+    font-family: 'Microsoft YaHei', 'YaHei Monaco Hybird', serif, Menlo;
+}
+
+pre code {
+    color: #C86267;
+    font-size: 16px;
+}
+
+code {
+    color: #C86267;
+    font-size: 16px;
+    background-color: #1B2529;
+}
+
+pre {
+    background-color: #1B2529;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, tr {
+    border-bottom: 2px solid #4E6773;
+}
+
+th {
+    font-weight: bold;
+}
+
+th, td {
+    background-color: #1B2529;
+}
+
+blockquote, q {
+    color: #afcadd;
+    font-style: italic;
+    border-color: #175A85;
+    background-color: #2F3A3F;
+}

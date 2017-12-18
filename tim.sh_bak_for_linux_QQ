@@ -1,0 +1,7 @@
+#!/bin/sh
+env locale=zh_CN
+export XIM="fcitx"
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+wine /home/yaro/.deepinwine/Deepin-TIM/drive_c/Program\ Files/Tencent/TIM/Bin/Tim.exe

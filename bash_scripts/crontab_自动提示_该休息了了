@@ -1,0 +1,7 @@
+0 */1 * * * export DISPLAY=:0.0 && /usr/bin/notify-send "客官，该休息了！" "过度操劳对身体不好╮(╯﹏╰)╭"
+0 22 * * * export DISPLAY=:0.0 && /usr/bin/notify-send "Go to sleep" "Rome was not built in a day! 5分钟后关机!"
+5 22 * * * export DISPLAY=:0.0 && /usr/bin/notify-send "滚去休息！" "PC will be shutdown in 5 Min!"
+9 22 * * * export DISPLAY=:0.0 && /usr/bin/notify-send "Shutdowning" "This PC will be shutdown in 1 Min!"
+10 22 * * * export DISPLAY=:0.0 && /usr/bin/sync; /usr/bin/sync/; /usr/bin/sync; /usr/bin/shutdown -h +1
+
+# “export DISPLAY=:0.0 &&”必须声明在哪个显示器显示，可以用“echo DISPLAY”查看当前变量的值；也可以缩写为：“DISPLAY=:0.0 ”
