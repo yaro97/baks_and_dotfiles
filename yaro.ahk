@@ -43,7 +43,7 @@ return
 ;========使用说明========
 ;pause键 启用/停用 脚本
 ;鼠标拖选、双击选词翻译
-
+;=====================
 ;原作者：https://weibo.com/1928931362/Dcdvnphx7?type=comment#_rnd1522542132744
 ;修订版本作者：https://www.pdawiki.com/forum/forum.php?mod=viewthread&tid=23696&extra=&page=1
 
@@ -68,15 +68,14 @@ return
 Copy:
 Send ^c   ;发送ctrl+c 复制所选内容到剪贴板
 Sleep 200
-; ====限定只在chrome/firefox...里面生效====
-;MouseGetPos, ,,win
-;        SetTitleMatchMode, 2
-;        if(WinActive("Chrome") != win and WinActive("Firefox") != win and WinActive("Anki") != win and WinActive("编辑当前") != win and WinActive("浏览器") != win){    ;判断当前所处的软件窗口
-;	;	Clipboard := oldClipboard   
-;		  return
-;		}
+MouseGetPos, ,,win
+        SetTitleMatchMode, 2
+        if(WinActive("Chrome") != win and WinActive("Firefox") != win and WinActive("Anki") != win and WinActive("编辑当前") != win and WinActive("浏览器") != win){    ;判断当前所处的软件窗口
+	;	Clipboard := oldClipboard   
+		  return
+		}
         
-len := strlen(clipboard)    ;剪贴板字符数
+ len := strlen(clipboard)    ;剪贴板字符数
     index := 1               
     loop    ;循环剪贴板里的每个字符
     { 
