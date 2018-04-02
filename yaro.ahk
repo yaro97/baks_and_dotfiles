@@ -15,6 +15,7 @@
 ;快速运行程序
 #c::Run calc ; Win+z
 #n::Run notepad ; Win+n
+#^s::Run D:\Tool\Snipaste-1.15.3-x64\Snipaste.exe
 #^b::Run https://www.baidu.com ; Ctrl+Win+b
 
 
@@ -37,24 +38,18 @@ clipboard = %color%
 return
 
 
-;==============
+;=====================
 ;GoldenDict 划译插件[AHK]
-;version 0.9
-;allor@sian.cn
-;2018-01-08
-;GUI及其他功能完善有待日后空闲
 ;========使用说明========
-;设置goldendict剪切板取词快捷键：Ctrl+Ctrl+C
 ;pause键 启用/停用 脚本
 ;鼠标拖选、双击选词翻译
 
 ;原作者：https://weibo.com/1928931362/Dcdvnphx7?type=comment#_rnd1522542132744
 ;修订版本作者：https://www.pdawiki.com/forum/forum.php?mod=viewthread&tid=23696&extra=&page=1
 
-; #IfWinExist ahk_exe GoldenDict.exe    ;判断goldendict是否打开
-Pause::Suspend  ;暂停/启用脚本
-~LButton::
+Pause::Suspend ;Pause按键暂停/启用脚本
 
+~LButton::
 CoordMode, Mouse, Screen
 SetKeyDelay -1, 10
 MouseGetPos, x1, y1
@@ -62,7 +57,7 @@ KeyWait, LButton
 MouseGetPos, x2, y2
 if (x1-x2>30 or x2-x1>30) {   ;判断鼠标点住左键后移动范围,防误触
 oldClipboard := Clipboard    ;赋值鼠标原始剪贴板内容
-	gosub, Copy     ;执行Copy标签
+	gosub, Copy     ;执行第19行的Copy标签
 }
 else if (A_priorHotKey = "~LButton" and A_TimeSincePriorHotkey < 450){    ;双击鼠标左键
 oldClipboard := Clipboard    
@@ -73,14 +68,15 @@ return
 Copy:
 Send ^c   ;发送ctrl+c 复制所选内容到剪贴板
 Sleep 200
-MouseGetPos, ,,win
-        SetTitleMatchMode, 2
-        if(WinActive("Chrome") != win and WinActive("Firefox") != win and WinActive("Anki") != win and WinActive("编辑当前") != win and WinActive("浏览器") != win){    ;判断当前所处的软件窗口
-	;	Clipboard := oldClipboard   
-		  return
-		}
+; ====限定只在chrome/firefox...里面生效====
+;MouseGetPos, ,,win
+;        SetTitleMatchMode, 2
+;        if(WinActive("Chrome") != win and WinActive("Firefox") != win and WinActive("Anki") != win and WinActive("编辑当前") != win and WinActive("浏览器") != win){    ;判断当前所处的软件窗口
+;	;	Clipboard := oldClipboard   
+;		  return
+;		}
         
- len := strlen(clipboard)    ;剪贴板字符数
+len := strlen(clipboard)    ;剪贴板字符数
     index := 1               
     loop    ;循环剪贴板里的每个字符
     { 
@@ -97,7 +93,7 @@ MouseGetPos, ,,win
 		 if(index > len)
             break
     }
-Send ^^c  ;发送全局的 ctrl+shift+c  ,请在goldendict中设置翻译剪切板的热键为 Ctrl+Shift+C
-Clipboard := oldClipboard  ;恢复原始剪贴板内容;如果希望默认复制所翻译的内容,可删除此行
+Send ^{c 2}  ;发送全局的 ctrl+shift+c  ,请在goldendict中设置翻译剪切板的热键为 Ctrl+Shift+C
+; Clipboard := oldClipboard  ;恢复原始剪贴板内容;如果希望默认复制所翻译的内容,可删除此行
 return
 ; #IfWinExist
