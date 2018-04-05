@@ -15,9 +15,10 @@
 #c::Run calc ; Win+z
 #n::Run notepad ; Win+n
 #p::Run mspaint
+#g::Run E:\GitHub\baks_and_dotfiles\goldendict.ahk
 #^s::Run D:\Tool\Snipaste-1.15.3-x64\Snipaste.exe
 #^f::Run D:\Tool\FSCapture_Ver.8.8_Chs\FSCapture.exe
-#^g::Run E:\GitHub\baks_and_dotfiles\goldendict.ahk
+#^g::Run "D:\Tool\GoldenDict\GoldenDict.exe"
 #^b::Run https://www.baidu.com ; Ctrl+Win+b
 #^v::Run "D:\Program Files\Microsoft VS Code\Code.exe"
 #^e::Run "D:\Program Files\Everything\Everything.exe"

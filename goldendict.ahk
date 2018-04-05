@@ -1,15 +1,7 @@
-;=====================
-;GoldenDict 划译插件[AHK]
-;========使用说明========
-;pause键 启用/停用 脚本
-;鼠标拖选、双击选词翻译
-;=====================
-;原作者：https://weibo.com/1928931362/Dcdvnphx7?type=comment#_rnd1522542132744
-;修订版本作者：https://www.pdawiki.com/forum/forum.php?mod=viewthread&tid=23696&extra=&page=1
-
-Pause::Suspend ;Pause按键暂停/启用脚本
-
+﻿; #IfWinExist ahk_exe GoldenDict.exe    ;判断goldendict是否打开
+Alt::Suspend  ;暂停/启用脚本
 ~LButton::
+
 CoordMode, Mouse, Screen
 SetKeyDelay -1, 10
 MouseGetPos, x1, y1
@@ -55,4 +47,4 @@ MouseGetPos, ,,win
 Send ^{c 2}  ;发送全局的 ctrl+shift+c  ,请在goldendict中设置翻译剪切板的热键为 Ctrl+Shift+C
 ; Clipboard := oldClipboard  ;恢复原始剪贴板内容;如果希望默认复制所翻译的内容,可删除此行
 return
-; #IfWinExistmode
+; #IfWinExist
