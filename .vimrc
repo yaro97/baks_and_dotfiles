@@ -1,5 +1,5 @@
 "先运行'curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-"然后在nvim中执行':PlugnInstall'
+"然后在nvim中执行':PlugInstall'
 "参考：https://github.com/junegunn/vim-plug
 "设置alias vi="vim" 
 
