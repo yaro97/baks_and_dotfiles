@@ -1,5 +1,5 @@
 "先运行'curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-"然后在nvim中执行':PlugInstall'
+"然后在nvim中执行':PlugnInstall'
 "参考：https://github.com/junegunn/vim-plug
 "设置alias vi="vim" 
 
@@ -78,6 +78,7 @@ let g:indentLine_enabled = 1
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1 "禁用折叠
+let g:vim_markdown_conceal = 0  "不隐藏mk语法
 
 " Initialize plugin system
 call plug#end()
