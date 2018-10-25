@@ -20,7 +20,8 @@ body
   margin-left:  2px;
   margin-bottom: 3px;
   background: white;
-  font-family: "Georgia", "Droid Serif", "Microsoft YaHei", "WenQuanYi Micro Hei", serif, sans-serif !important;
+  /* font-family: "Georgia", "Droid Serif", "Microsoft YaHei", "WenQuanYi Micro Hei", serif, sans-serif !important; */
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !important;
 }
 
 .gdarticle 
