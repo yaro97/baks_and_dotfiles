@@ -4,7 +4,7 @@
 # Author:yaro,2017.11.23
 # crontab -l
 # 添加：  */1 * * * * /bin/sh /root/ss_start_status.sh
-# 命令行启动ss： ssserver -p 443 -k happy1314SS -m aes-256-cfb --user nobody -d start
+# 命令行启动ss： ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
 # 可以把上一行命令保存为 ss.sh，并赋予 +x 权限, /bin/sh /root/ss.sh 运行即可。
 
 
